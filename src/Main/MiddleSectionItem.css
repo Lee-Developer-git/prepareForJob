@@ -1,0 +1,40 @@
+body {
+    width: 100%;
+}
+
+.SectionItem{
+    width: 25%;
+    float: left;
+    background-color: #08263a;
+}
+
+.main-text > .button-blue{
+    left: 20px;
+}
+
+.Information{
+    height: 230px;
+    text-align: center;
+}
+
+.Information-box{
+    display: inline-block;
+    margin: 30px;
+    padding: 0px 10px 0px 10px;
+}
+
+.Information-icon{
+    font-size: 40px;
+}
+
+.Information-title{
+    font-size: 30px;
+    color: #cccccc;
+    margin-bottom: 10px;
+}
+
+.Information-text{
+    display: inline-block;
+    width: 200px;
+    color: #cccccc;
+}

@@ -1,0 +1,27 @@
+.BottomSection{
+    text-align: center;
+    height: 600px;
+}
+
+.BottomSection-top{
+    position: relative;
+    top: 150px;
+}
+
+.Bottom-text{
+    color: #3498db;
+    font-size: 55px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.Button-default{
+    color: black;
+    font-size: 17px;
+    background-color: #7f7f7f;
+    position: relative;
+    border: none;
+    border-radius: 2px;
+    padding: 15px 30px 15px 30px;
+    text-align: center;
+}
