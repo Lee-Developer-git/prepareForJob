@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import BbsItem from './BbsItem';
-import './BbsList.css';
 import { connect } from 'react-redux';
 import Pagination from '@material-ui/lab/Pagination';
+
+import './css/BbsList.css';
 
 class BbsList extends Component {
     render() {
@@ -12,6 +13,7 @@ class BbsList extends Component {
         const itemList = boards.map(
             info => (<BbsItem 
                 key={info.id}
+                id={info.id}
                 title={info.title}
                 date={info.date}
                 category={info.category}

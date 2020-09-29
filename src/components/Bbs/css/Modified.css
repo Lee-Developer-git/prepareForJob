@@ -20,10 +20,18 @@
     border-bottom: 1px solid gray;
 }
 
-.ctg {
+.modifiedDate {
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: gray;
+    margin-top: 1%;
+    margin-bottom: -2%;
+}
+
+.ctg, .modifiedName {
     display: inline-block;
     border: 1px solid #cccccc;
-    width: 15%;
+    width: 7%;
     height: 35px;
     line-height: 35px;
     text-align: center;
@@ -31,6 +39,10 @@
     font-size: 14px;
     margin-right: 2%;
     margin-top: 2%;
+}
+
+.modifiedName {
+    margin-left: -1%;
 }
 
 .title-input {
@@ -51,7 +63,6 @@
     border-radius: 3px;
     padding-left: 1%;
     padding-top: 1%;
-    line-height: 0;
     color: gray;
     margin-bottom: 3%;
 }

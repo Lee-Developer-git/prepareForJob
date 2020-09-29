@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
-import './Modified.css';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+
+import './css/Modified.css';
 
 class BbsModified extends Component {
     render() {    
+        const { selectedBoard } = this.props;
+
         return (
             <>
                 <Header />
@@ -12,9 +16,13 @@ class BbsModified extends Component {
                     <div className="inner">
                         <div className="write">
                             글쓰기
+                            <div className="modifiedDate">{selectedBoard.date}</div>
                         </div>
                         <div className="ctg">
                             카테고리
+                        </div>
+                        <div className="modifiedName">
+                            {selectedBoard.name}
                         </div>
                         <input className="title-input" value="제목을 입력해주세요"/>
                         <input className="content-input" />
@@ -30,4 +38,10 @@ class BbsModified extends Component {
     }
 }
 
-export default BbsModified;
+let mapStateToProps = (state) => {
+    return {
+        selectedBoard: state.selectedBoard
+    };
+}
+
+export default connect(mapStateToProps)(BbsModified);
