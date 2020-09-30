@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom"
 import { connect } from 'react-redux';
-import { board_read } from '../reducer/App_reducer';
+import { board_read } from '../../reducer/App_reducer';
 
 class BbsItem extends Component {
     handleUpdateForm = (id) => {

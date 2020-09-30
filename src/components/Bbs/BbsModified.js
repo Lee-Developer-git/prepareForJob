@@ -24,8 +24,8 @@ class BbsModified extends Component {
                         <div className="modifiedName">
                             {selectedBoard.name}
                         </div>
-                        <input className="title-input" value="제목을 입력해주세요"/>
-                        <input className="content-input" />
+                        <input className="title-input" value={selectedBoard.title}/>
+                        <input className="content-input" value={selectedBoard.content} />
                         <div>
                             <div className="submit">등록</div>
                             <div className="cancel">취소</div>
@@ -40,7 +40,7 @@ class BbsModified extends Component {
 
 let mapStateToProps = (state) => {
     return {
-        selectedBoard: state.selectedBoard
+        selectedBoard: state.board_reducer.selectedBoard
     };
 }
 

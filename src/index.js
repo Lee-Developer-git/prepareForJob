@@ -3,18 +3,23 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import './index.css';
-
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import board_reducer from './components/reducer/App_reducer';
+import { PersistGate } from 'redux-persist/integration/react'
 
-let store = createStore(board_reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import configureStore from './store';
+
+const { store, persistor } = configureStore();
+
+const Root = () => (
+    <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+            <App />
+        </PersistGate>
+    </Provider>
+)
 
 ReactDOM.render(
-    <Provider store={store}>
-        <App />
-    </Provider>, 
+    <Root />, 
     document.getElementById('root')
 );
 

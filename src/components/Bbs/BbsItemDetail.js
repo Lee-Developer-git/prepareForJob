@@ -12,8 +12,13 @@ import './css/Detail.css';
 //f이면 댓글 띄워주고 
 
 class BbsItemDetail extends Component {
+    state= {
+        listCommentChange: true
+    };
+    
     render() {
         const { selectedBoard } = this.props;
+        const { listCommentChange } = this.state;
 
         return (
             <>
@@ -62,7 +67,7 @@ class BbsItemDetail extends Component {
 
 let mapStateToProps = (state) => {
     return {
-        selectedBoard: state.selectedBoard
+        selectedBoard: state.board_reducer.selectedBoard
     };
 }
 

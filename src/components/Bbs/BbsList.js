@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import BbsItem from './BbsItem';
 import { connect } from 'react-redux';
-import Pagination from '@material-ui/lab/Pagination';
 
 import './css/BbsList.css';
 
@@ -11,7 +10,7 @@ class BbsList extends Component {
         const { boards } = this.props;
         
         const itemList = boards.map(
-            info => (<BbsItem 
+            info => (<BbsItem
                 key={info.id}
                 id={info.id}
                 title={info.title}
@@ -21,13 +20,12 @@ class BbsList extends Component {
                 views={info.views}
                 content={info.content}
             />)
-        )
+        );
 
         return (
             <div>
                 <Header />
                 {itemList}
-                <Pagination count={10} variant="outlined" color="primary" className="pagination" />
             </div>
         );
     }
@@ -35,7 +33,7 @@ class BbsList extends Component {
 
 let mapStateToProps = (state) => {
     return {
-        boards: state.boards
+        boards: state.board_reducer.boards
     };
 }
 
