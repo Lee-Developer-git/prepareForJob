@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MiddleSectionItem.css';
+import './css/MiddleSectionItem.css';
 
 
 class MiddleSectionItem extends Component {

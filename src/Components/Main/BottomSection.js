@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './BottomSection.css';
+import './css/BottomSection.css';
 
 class BottomSection extends Component {
     render(){
@@ -8,7 +8,7 @@ class BottomSection extends Component {
                 <div className="BottomSection-top">
                     <div className="Bottom-text"><strong>ABOUT US</strong></div><br/>
                     <button className="Button-default">button</button>
-                    <button className="button-blue">button</button>
+                    <button className="Button-blue">button</button>
                     <button className="Button-default">button</button>
                 </div>
             </div>

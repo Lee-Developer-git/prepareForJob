@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MiddleSection.css';
+import './css/MiddleSection.css';
 import MiddleSectionItem from './MiddleSectionItem';
 
 
